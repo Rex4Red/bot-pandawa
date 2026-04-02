@@ -12,8 +12,8 @@ const CONFIG = {
   loginUrl: 'https://pandawakkn.id/login',
   username: process.env.PANDAWA_USERNAME,
   password: process.env.PANDAWA_PASSWORD,
-  pptDir: path.join(__dirname, 'downloads', 'ppt'),
-  modulDir: path.join(__dirname, 'downloads', 'modul'),
+  pptDir: path.join(__dirname, 'downloads', `materi_${materiId}`, 'ppt'),
+  modulDir: path.join(__dirname, 'downloads', `materi_${materiId}`, 'modul'),
   outputDir: path.join(__dirname, 'output'),
 };
 
@@ -451,13 +451,13 @@ async function main() {
     console.log('\n🛑 STOP — Not proceeding to Resume section!');
 
     // 7. Generate PDFs
-    await generatePDF(CONFIG.pptDir, path.join(CONFIG.outputDir, 'PPT_Materi.pdf'), 'PPT Slides');
-    await generatePDF(CONFIG.modulDir, path.join(CONFIG.outputDir, 'Modul_Materi.pdf'), 'Dokumen Materi');
+    await generatePDF(CONFIG.pptDir, path.join(CONFIG.outputDir, `Materi_${materiId}_PPT.pdf`), 'PPT Slides');
+    await generatePDF(CONFIG.modulDir, path.join(CONFIG.outputDir, `Materi_${materiId}_Modul.pdf`), 'Dokumen Materi');
 
     console.log('\n\n============================');
     console.log('🎉 ALL DONE!');
-    console.log(`📁 PPT PDF:    ${path.join(CONFIG.outputDir, 'PPT_Materi.pdf')}`);
-    console.log(`📁 Module PDF: ${path.join(CONFIG.outputDir, 'Modul_Materi.pdf')}`);
+    console.log(`📁 PPT PDF:    ${path.join(CONFIG.outputDir, `Materi_${materiId}_PPT.pdf`)}`);
+    console.log(`📁 Module PDF: ${path.join(CONFIG.outputDir, `Materi_${materiId}_Modul.pdf`)}`);
     console.log(`⏰ End: ${new Date().toLocaleString()}`);
     console.log('============================\n');
 

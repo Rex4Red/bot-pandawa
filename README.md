@@ -20,11 +20,17 @@ bot-pandawa/
 ├── .env.example        # Template for .env
 ├── package.json        # Dependencies
 ├── downloads/
-│   ├── ppt/            # Downloaded PPT slide images
-│   └── modul/          # Downloaded module page images
+│   ├── materi_3/       # Hasil scrape materi ID 3
+│   │   ├── ppt/
+│   │   └── modul/
+│   └── materi_4/       # Hasil scrape materi ID 4
+│       ├── ppt/
+│       └── modul/
 └── output/
-    ├── PPT_Materi.pdf  # Generated PPT PDF
-    └── Modul_Materi.pdf # Generated Module PDF
+    ├── Materi_3_PPT.pdf
+    ├── Materi_3_Modul.pdf
+    ├── Materi_4_PPT.pdf
+    └── Materi_4_Modul.pdf
 ```
 
 ## 🚀 Setup & Installation
@@ -98,8 +104,10 @@ Mengambil screenshot full page dan dump HTML untuk debugging struktur halaman.
 
 Setelah selesai, file PDF akan tersedia di:
 
-- `output/PPT_Materi.pdf` — Semua slide PPT
-- `output/Modul_Materi.pdf` — Semua halaman dokumen materi
+- `output/Materi_{id}_PPT.pdf` — Semua slide PPT
+- `output/Materi_{id}_Modul.pdf` — Semua halaman dokumen materi
+
+Setiap materi disimpan terpisah, jadi hasil sebelumnya **tidak akan tertimpa**.
 
 ## ⚙️ Requirements
 

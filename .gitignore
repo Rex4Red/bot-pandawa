@@ -5,10 +5,8 @@ node_modules/
 .env
 
 # Downloaded scraping results
-downloads/ppt/*
-downloads/modul/*
-!downloads/ppt/.gitkeep
-!downloads/modul/.gitkeep
+downloads/materi_*/
+!downloads/.gitkeep
 
 # Generated output files
 output/*
