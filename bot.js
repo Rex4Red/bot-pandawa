@@ -464,10 +464,9 @@ async function main() {
   } catch (e) {
     console.error(`\n❌ Error: ${e.message}`);
     console.error(e.stack);
-  } finally {
-    await sleep(5000);
-    await browser.close();
   }
+
+  console.log('\n🌐 Browser tetap terbuka. Tutup manual atau tekan Ctrl+C untuk keluar.');
 }
 
 main();
