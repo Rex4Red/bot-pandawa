@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains credentials!)
+.env
+
+# Downloaded scraping results
+downloads/ppt/*
+downloads/modul/*
+!downloads/ppt/.gitkeep
+!downloads/modul/.gitkeep
+
+# Generated output files
+output/*
+!output/.gitkeep
+
+# Debug files
+debug_fullpage.png
+debug_html.txt
+
+# IDE & Editor
+.cursor/
+.agent/
+.agents/
+.agent-mem/
+.brainsync/
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Rules files
+.cursorrules
+.windsurfrules
+AGENT.md
+CLAUDE.md
+
+# Auto-generated agent rules (personalized per developer)
+.brainsync/agent-rules.md
